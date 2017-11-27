@@ -1,10 +1,8 @@
 #implement a quick sort in python
 #it can sort in O(nlogn) on average (for most cases), worse case O(n^2) if the pivot chosen is either the highest or lowest value
 
-
 import random
 test = random.sample(range(0, 30), 15)
-
 
 def quicksort(list_to_sort, low_index, high_index):
 	if((high_index - low_index) > 0):	#continue with the algorithm
@@ -27,6 +25,7 @@ def partition(list_to_sort, low_index, high_index):
 	#once it sorts from low index to high index
 	list_to_sort[pivot], list_to_sort[divider] = list_to_sort[divider], list_to_sort[pivot]
 	return divider
+
 print("The test sample is: ", test)
 quicksort (test, 0, len(test) -1)
 print("After the quicksort: ",test)
